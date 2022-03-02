@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+.banner {
+    height: 210px;
+    background: green;
+    background: url("http://static.huruqing.cn/fresh/banner3.jpeg") 50%;
+    background-size: 100%;
+    overflow-y: auto
+}
+
+.recomd {
+    flex-wrap: wrap
+}
+
+.recomd .item {
+    width: 22%
+}
+
+.pintuan .l .title, .pintuan .r .title {
+    right: 1px;
+    top: 6px;
+    font-size: 10px;
+    color: #fff
+}
+
+.pintuan .l, .pintuan .r {
+    width: 170px;
+    height: 90px
+}
+
+.pintuan .l {
+    background: url("http://fresh.huruqing.cn/img/miaosha-bg.1e1a2d1e.png") 50% no-repeat;
+    background-size: 100%;
+    height: 100px
+}
+
+.h100pc {
+    width: 100%
+}
+
+.f999 {
+    color: #999
+}
+
+.kanjia {
+    background: #d92c01;
+    padding: 5px;
+    border-radius: 3px
+}
+
+.coupon {
+    height: 37px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATEAAAAoCAYAAACWy82PAAAELElEQVR42u3bTW7bRhjG8f87pCQDdpa9SXqA7tsUuUP2RbosskxWAZq7xM3aB3Av0gYBGtiy+CW+XZCSOLLkDzkRRfv5ATbJIUWNIfrxO0Pavrx6SesX4DXwI3DCY+PO5OtXRlezvnsiIru7BM6BP4G/0t/+ILQ73gIfgZ94ZAFm8znji0uO//2sABMZvhOanDoF3vrnf7Avr17+3DY8GqGqSLKMNMtJiqLv7ojId1JTv0iB3/vuyIO5k+QFaZ6R5AWhqvrukYjshb1Oged9d2MXTbWVk+ZtteXed5dEZM8MnqfAs747cqfOek2SF8vgsvm87y6JSM8Me5b23YmbhLIkyRfVVqlqS+SRcLxdXm/DiPb66oDuUUsHFWJWt9VWrmpL5JA5gG0IIvNlQ3PMemD52kkervcQ051Ekf64QRQv1rbjnfWW+U6Doe89ftp/iLmTFAVplpFkOUHVlsjuLA4Z6FZArILIVuXRcn3dQGdr9hJiNp8381pZTpLnmOa2RGLd0FkLoziQ2n225TweLZ6E1I4DntXwjQuiUFWks4w0ywhl2ffPKbIf66FjnfmjtXaIq6VOy80p9JQS6g5SGxs2TvDC8aKGB+RNKMtVcOmBUxmyRQDZav1atbQcqnVes8HWgYfC6JtYDicXYUbtbaD5naoz85p0ljGaXqniksPTDSC7x/Z9g0eB1Jvrc2LBsCPDjmgCrQQvHSqPPqhQloymV6Szmea4ZL8MCM3Sw2Lb4jBatC/mkTZcor78JkN288R+MGzSVGkA1E6aZ4wupoRpgee1LgJ5uG7oROFkyzbv7gdVRLJ0p7uTRs2YjLFl2FENR8APYwA8d8hrPPdmvaiboagupqcpCqQtIWQWh9ZCpzSKn9IW2e7GEDPmTHzGyHNsy9VkE4NJEs9p1u0QtKzbpTfLwvGKZmgqh2tb2HSCyQPxkG09kEDVkuzFxhBLvGLMjBH5bme1dgg6DlG4RX9d552bB5XjlUPVtDOnmY+bt9u66G+3DBOLQ6UbSOZRdRQHkN0+XNv4OejzkX5FIZZ6wZgZ6UOes7gLA1LDEouaNnKgZhVqtbfb8bp32xc3Gur2HPN2iOLt+bx97ab32uUXsvPcz6rNVm3d/dfWLQ6T9su6x4V2ZREwYe21a0OybVmzfXZbZLhSaMJrwhUJB/psV6C5yZDCtbRY/eM7G3fc9h8Wuz5UeNMJtr3nvd7rloceFT4iAKTH/t/hhpeIyC2CAkxEhiw8/BQiIv1RiInIoCnERGTQFGIiMmgKMREZNIWYiAyaQkxEBk0hJiKDphATkUFTiInIoCnERGTQFGIiMmgBuOi7EyIiO7oMwN9990JEZEfnAfjQdy9ERHb0IYT3Z6fAu757IiJyT+9OPp2fBoDw/uwN8CtwBkz77pmIyBZTmpx6cfLp/A3A/yRbuifoFEgRAAAAAElFTkSuQmCC) 50% no-repeat;
+    background-size: 100% 100%
+}
+
+.stickey {
+    width: 100%;
+    height: 37px;
+    border-bottom: 1px solid gainsboro
+}
+
+.navagater {
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #797d82;
+    font-size: 14px;
+    border-bottom: 1px solid #ededed
+}
+
+.product-list {
+    min-height: 100vh
+}
+
+.item-li {
+    list-style: none;
+    width: 165px;
+    height: 255px;
+    margin-bottom: 0
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent
+}
+
+.index-list {
+    overflow: auto
+}
+
+.img-li {
+    height: 165px;
+    background: #f4f4f4
+}
+
+.red {
+    color: #d92c01
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
