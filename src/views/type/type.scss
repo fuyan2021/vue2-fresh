@@ -1,0 +1,82 @@
+
+.search {
+  top: 0px;
+  width: 100%;
+  height: 54px;
+  z-index: 10;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  box-sizing: border-box;
+  padding: 10px 12px;
+}
+.van-search {
+  flex: 1;
+  padding-left: 12px;
+  border-radius: 2px;
+  border: 1px solid #ebedf0;
+  height: 34px;
+  background: #f7f8fa;
+}
+.van-field__control {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+
+  color: #323233;
+  line-height: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  font-size: 14px;
+  user-select: none;
+  width: 100%;
+  height: 600px;
+  margin-top: 54px;
+}
+.left .right {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.left {
+  width: 33.33%;
+  background: #f7f8fa;
+}
+.right {
+  width: 66.66%;
+  overflow: auto;
+}
+.left-item {
+  padding: 12px 8px 12px 12px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 12px 20px 8px;
+  overflow: hidden;
+  color: rgb(50, 50, 51);
+  font-size: 14px;
+  line-height: 20px;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
+  user-select: none;
+}
+.van-sidebar-item__text {
+  position: relative;
+  display: inline-block;
+  word-break: break-all;
+}
+.img {
+  width: 100px;
+}
+.type{
+    padding: 10px 5px;
+    margin: 5px 0;
+    height: 30px;
+    border-left: 1px solid red;
+}

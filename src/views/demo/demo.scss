@@ -1,0 +1,25 @@
+.box :hover {
+    transform: translateX(100px);
+    background: red;
+    // animation-name: move;
+    // /* 动画时长 */
+    // animation-duration: 0.5s;
+    // animation-iteration-count: 1;
+}
+
+
+/* 创建动画 */
+
+@keyframes move {
+    /* 设置动画初始状态 */
+    0% {
+        background: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background: yellow;
+        left: 200px;
+        top: 0;
+    }
+}

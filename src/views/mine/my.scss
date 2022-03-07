@@ -1,0 +1,33 @@
+
+.head {
+    height: 145px;
+    width: 100%;
+    background-image: url('http://static.huruqing.cn/fresh/banner3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .head .text {
+    top: 16px;
+    left: 20px;
+  }
+  .list .item {
+    height: 44px;
+  }
+  .list .item .small {
+    height: 100%;
+    border-bottom: 1px solid #f4f4f4;
+  }
+  .list .item .small .fw {
+    font-weight: 600;
+  }
+  footer {
+    width: 100%;
+    bottom: 0;
+  }
+  footer .lastlist {
+    height: 60px;
+  }
+  footer .icon {
+    width: 20px;
+    height: 20px;
+  }

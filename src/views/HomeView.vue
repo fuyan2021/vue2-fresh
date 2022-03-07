@@ -6,18 +6,28 @@
         class="my-swipe"
         :autoplay="3000"
         indicator-color="white"
-        style="height: 200px"
+        style="height: 280px"
       >
-        <van-swipe-item v-for="(item, index) in banners" :key="item">
-          <img :src="item" alt="" :id="index" style="width: 100%" />
+        <van-swipe-item v-for="(item1, index) in banners" :key="item1">
+          <img
+            :src="item1"
+            alt=""
+            :id="index"
+            style="width: 100%; height: 100%"
+          />
         </van-swipe-item>
       </van-swipe>
       <!-- 分类 -->
       <div class="flex jc-sa aic recomd pb-60">
-        <a href="" class="item flex2 jc-c aic" v-for="item in type" :key="item">
-          <img :src="item.iconUrl" alt="" />
-          <span class="mt-10">{{ item.name }}</span>
-        </a>
+        <p
+          class="item flex2 jc-c aic"
+          v-for="item2 in type"
+          :key="item2"
+          @click="getFreshList(item2.categoryId)"
+        >
+          <img :src="item2.iconUrl" alt="" />
+          <span class="mt-10">{{ item2.name }}</span>
+        </p>
       </div>
       <!-- 秒杀 -->
       <div class="flex jc-sa aic pintuan" style="height: 115px">
@@ -80,7 +90,11 @@
         style="padding-bottom: 60px"
       >
         <li class="item-li" v-for="item in fresh" :key="item">
-          <router-link :to="{path:'/detail/'+item.productId}" active-class="on" class="item">
+          <router-link
+            :to="{ path: '/detail/' + item.productId }"
+            active-class="on"
+            class="item"
+          >
             <img :src="item.imgUrl" alt="" class="img-li" />
             <div class="flex2 lh15 mt-10">
               <p class="f14 lh15">{{ item.masterName }}</p>
@@ -112,7 +126,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-@import "./home.scss";
+@import "./css/home.scss";
 @import "./css/common.scss";
 .item-li {
   list-style: none;
@@ -120,7 +134,6 @@
   height: 255px;
   margin-bottom: 0;
 }
-
 </style>
 <script>
 import Footer from "../components/Footer.vue";
@@ -144,7 +157,9 @@ export default {
     this.getTypeList();
     this.getFreshList();
   },
+ 
   methods: {
+    // 轮播图
     getSwipList() {
       $axios
         .get("/product/getBanners")
@@ -156,6 +171,7 @@ export default {
           console.log("err");
         });
     },
+    // 分类
     getTypeList() {
       $axios
         .get("/category/all")
@@ -166,21 +182,23 @@ export default {
           console.log("错误");
         });
     },
-    getFreshList() {
+    // 生鲜列表
+    getFreshList(categoryId) {
       let params = {
-        categoryId: 145,
-        currPage: 1,
+        categoryId: categoryId ? categoryId : '',
+        
       };
       $axios
-        .get("/product/list?currPage=1")
+        .post("/product/list", params)
         .then((res) => {
           this.fresh = res.list;
-          console.log("生鲜：" + res);
         })
         .catch((err) => {
           console.log("err");
         });
     },
+    //触底事件
+    
   },
 };
 </script>
